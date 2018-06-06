@@ -119,3 +119,6 @@ dynamic_*.js
 # Ignore data file folders
 [Ii]mageserve/
 [Uu]ploads/
+
+.nuget/
+SolutionItems/

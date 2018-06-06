@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="ReferenceInfoData" table="vwReferenceInfo" mutable="false">
+    <id name="Id" column="ReferenceId" type="int">
+    </id>
+
+    <property name="UrlAlias" type="string" length="200" not-null="false">
+      <column name="UrlAlias" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Name" type="string" length="100" not-null="false">
+      <column name="Name" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+    <property name="Slug" type="string" length="200" not-null="false">
+      <column name="Slug" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Title" type="string" length="200" not-null="false">
+      <column name="Title" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="ThumbnailUrl" type="string" length="200" not-null="false">
+      <column name="ThumbnailUrl" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Description" type="string" length="1000" not-null="false">
+      <column name="Description" not-null="false" sql-type="nvarchar" length="1000" />
+    </property>
+    <property name="Keywords" type="string" length="200" not-null="false">
+      <column name="Keywords" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+      <property name="FolderId" type="int" not-null="false">
+          <column name="FolderId" not-null="false" sql-type="int" />
+      </property>
+      <property name="Folder" type="string" length="200" not-null="false">
+      <column name="Folder" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="IsPublished" type="bool" not-null="false">
+      <column name="IsPublished" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="HideTitle" type="bool" not-null="false">
+      <column name="HideTitle" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="EnableReview" type="bool" not-null="false">
+      <column name="EnableReview" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="EnableCategory" type="bool" not-null="false">
+      <column name="EnableCategory" not-null="false" sql-type="bit" length="1" />
+    </property>
+      <property name="EnableLocation" type="bool" not-null="false">
+          <column name="EnableLocation" not-null="false" sql-type="bit" length="1" />
+      </property>
+
+      <property name="EnableAds" type="bool" not-null="false">
+      <column name="EnableAds" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="EnableTopAd" type="bool" not-null="false">
+      <column name="EnableTopAd" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="CreatedDate" type="DateTime" not-null="false">
+      <column name="CreatedDate" not-null="false" sql-type="datetime" />
+    </property>
+    <property name="ModifiedDate" type="DateTime" not-null="false">
+      <column name="ModifiedDate" not-null="false" sql-type="datetime" />
+    </property>
+    <property name="SubsiteId" type="int" not-null="false">
+      <column name="SubsiteId" not-null="false" sql-type="int" />
+    </property>
+    <property name="LocationId" type="int" not-null="false">
+      <column name="LocationId" not-null="false" sql-type="int" />
+    </property>
+    <property name="LocationName" type="string" length="100" not-null="false">
+      <column name="LocationName" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <many-to-one name="Template" class="TemplateInfoData" column="TemplateId" not-null="true"/>
+
+    <bag name="Values" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="SubitemValueInfoData"/>
+    </bag>
+    <bag name="ReferenceCategorys" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceCategoryInfoData"/>
+    </bag>
+    <bag name="GridRows" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="GridRowInfoData"/>
+    </bag>
+    <bag name="ReferenceLanguages" cascade="all-delete-orphan" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceLanguageInfoData"/>
+    </bag>
+    <bag name="ReferenceKeywords" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceKeywordInfo"/>
+    </bag>
+  </class>
+</hibernate-mapping>

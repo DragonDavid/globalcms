@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="GridRowInfoData" table="tblGridRow" mutable="false">
+    <id name="Id" column="RowId" type="int">
+    </id>
+
+    <many-to-one name="Parent" class="ReferenceInfoData" column="ReferenceId" not-null="true"/>
+
+    <property name="GridId" type="int" not-null="false">
+      <column name="GridId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="Sort" type="int" not-null="false">
+      <column name="Sort" not-null="false" sql-type="int" />
+    </property>
+
+    <bag name="Cells" inverse="true">
+      <key column="RowId" />
+      <one-to-many class="GridCellInfoData"/>
+    </bag>
+
+  </class>
+</hibernate-mapping>

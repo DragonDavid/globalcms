@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40FFEB81-04F5-49E6-9A7E-6F64DE5A23DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubjectEngine.Component.Dto</RootNamespace>
+    <AssemblyName>SubjectEngine.Component.Dto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Core">
+      <HintPath>..\..\cmsReference\Framework\Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\globaladmin\Global.Data\AliasInfoDto.cs">
+      <Link>AliasInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ApplicationSettingDto.cs">
+      <Link>ApplicationSettingDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\BlockDto.cs">
+      <Link>BlockDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\BlockInfoDto.cs">
+      <Link>BlockInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\CategoryDto.cs">
+      <Link>CategoryDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\CollectionDto.cs">
+      <Link>CollectionDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\CollectionItemDto.cs">
+      <Link>CollectionItemDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DataTypeDto.cs">
+      <Link>DataTypeDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DEntityDto.cs">
+      <Link>DEntityDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DEntityItemDto.cs">
+      <Link>DEntityItemDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DocumentDto.cs">
+      <Link>DocumentDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DocumentInfoDto.cs">
+      <Link>DocumentInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\DucValueDto.cs">
+      <Link>DucValueDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\FolderDto.cs">
+      <Link>FolderDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\FolderInfoDto.cs">
+      <Link>FolderInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\FolderLanguageDto.cs">
+      <Link>FolderLanguageDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\FolderTreeDto.cs">
+      <Link>FolderTreeDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\GridColumnDto.cs">
+      <Link>GridColumnDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\GridDto.cs">
+      <Link>GridDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\GridRowDto.cs">
+      <Link>GridRowDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\KeywordDto.cs">
+      <Link>KeywordDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\LanguageDto.cs">
+      <Link>LanguageDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\LocationDto.cs">
+      <Link>LocationDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\LocationLanguageDto.cs">
+      <Link>LocationLanguageDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\MainMenuDto.cs">
+      <Link>MainMenuDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\MainMenuLanguageDto.cs">
+      <Link>MainMenuLanguageDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\MetadataDto.cs">
+      <Link>MetadataDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReferenceBriefDto.cs">
+      <Link>ReferenceBriefDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReferenceCategoryDto.cs">
+      <Link>ReferenceCategoryDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReferenceDto.cs">
+      <Link>ReferenceDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReferenceInfoDto.cs">
+      <Link>ReferenceInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReferenceKeywordInfoDto.cs">
+      <Link>ReferenceKeywordInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ReviewDto.cs">
+      <Link>ReviewDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SearchResultDto.cs">
+      <Link>SearchResultDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubitemDto.cs">
+      <Link>SubitemDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubitemInfoDto.cs">
+      <Link>SubitemInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubjectChildListDto.cs">
+      <Link>SubjectChildListDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubjectDto.cs">
+      <Link>SubjectDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubjectFieldDto.cs">
+      <Link>SubjectFieldDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubjectInfoDto.cs">
+      <Link>SubjectInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteBatchDto.cs">
+      <Link>SubsiteBatchDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteBriefDto.cs">
+      <Link>SubsiteBriefDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteCreateDto.cs">
+      <Link>SubsiteCreateDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteDto.cs">
+      <Link>SubsiteDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteInfoDto.cs">
+      <Link>SubsiteInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteLanguageInfoDto.cs">
+      <Link>SubsiteLanguageInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteMenuDto.cs">
+      <Link>SubsiteMenuDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\SubsiteMenuLanguageDto.cs">
+      <Link>SubsiteMenuLanguageDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\TemplateDto.cs">
+      <Link>TemplateDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\TemplateInfoDto.cs">
+      <Link>TemplateInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\UserDto.cs">
+      <Link>UserDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ZoneDto.cs">
+      <Link>ZoneDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.Data\ZoneInfoDto.cs">
+      <Link>ZoneInfoDto.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SubjectEngine\SubjectEngine.Core\SubjectEngine.Core.csproj">
+      <Project>{a8db3816-7468-435e-9ff1-e08d1b8e87bc}</Project>
+      <Name>SubjectEngine.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

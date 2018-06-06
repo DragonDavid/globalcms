@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="CategoryData" table="tblCategory">
+    <id name="Id" column="CategoryId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <property name="CategoryText" type="string" length="100" not-null="false">
+      <column name="CategoryText" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+    <property name="Slug" type="string" length="100" not-null="false">
+      <column name="Slug" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="TemplateId" type="int" not-null="false">
+      <column name="TemplateId" not-null="false" sql-type="int" />
+    </property>
+  </class>
+</hibernate-mapping>

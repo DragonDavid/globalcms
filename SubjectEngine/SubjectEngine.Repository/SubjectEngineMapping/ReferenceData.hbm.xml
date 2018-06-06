@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="ReferenceData" table="tblReference">
+    <id name="Id" column="ReferenceId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <property name="FolderId" type="int" not-null="false">
+      <column name="FolderId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="Name" type="string" length="100" not-null="false">
+      <column name="Name" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="Slug" type="string" length="200" not-null="false">
+      <column name="Slug" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Title" type="string" length="200" not-null="false">
+      <column name="Title" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="ThumbnailUrl" type="string" length="200" not-null="false">
+      <column name="ThumbnailUrl" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+    <property name="Description" type="string" length="1000" not-null="false">
+      <column name="Description" not-null="false" sql-type="nvarchar" length="1000" />
+    </property>
+
+    <property name="Keywords" type="string" length="200" not-null="false">
+      <column name="Keywords" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+    <property name="TemplateId" type="int" not-null="false">
+      <column name="TemplateId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="LocationId" type="int" not-null="false">
+      <column name="LocationId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="CreatedById" type="int" not-null="false">
+      <column name="CreatedById" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="IsPublished" type="bool" not-null="false">
+      <column name="IsPublished" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="IsMaster" type="bool" not-null="false">
+      <column name="IsMaster" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="EnableAds" type="bool" not-null="false">
+      <column name="EnableAds" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="EnableTopAd" type="bool" not-null="false">
+      <column name="EnableTopAd" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="CreatedDate" type="DateTime" not-null="false">
+      <column name="CreatedDate" not-null="false" sql-type="datetime" />
+    </property>
+    <property name="ModifiedDate" type="DateTime" not-null="false">
+      <column name="ModifiedDate" not-null="false" sql-type="datetime" />
+    </property>
+
+    <bag name="ReferenceLanguages" cascade="all-delete-orphan" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceLanguageData"/>
+    </bag>
+
+    <bag name="ReferenceCategorys" cascade="all-delete-orphan" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceCategoryData"/>
+    </bag>
+    <bag name="ReferenceKeywords" cascade="all-delete-orphan" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceKeywordData"/>
+    </bag>
+  </class>
+</hibernate-mapping>

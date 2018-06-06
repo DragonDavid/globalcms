@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DB7CCEA-4AC1-4417-8821-43ACBAD96EB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubjectEngine.Component.DtoConverter</RootNamespace>
+    <AssemblyName>SubjectEngine.Component.DtoConverter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Core">
+      <HintPath>..\..\cmsReference\Framework\Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Data">
+      <HintPath>..\..\cmsReference\Framework\Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\AliasInfoConverter.cs">
+      <Link>AliasInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ApplicationSettingConverter.cs">
+      <Link>ApplicationSettingConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\BlockConverter.cs">
+      <Link>BlockConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\BlockInfoConverter.cs">
+      <Link>BlockInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\CategoryConverter.cs">
+      <Link>CategoryConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\CollectionConverter.cs">
+      <Link>CollectionConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\CollectionItemConverter.cs">
+      <Link>CollectionItemConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\DataTypeConverter.cs">
+      <Link>DataTypeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\DEntityConverter.cs">
+      <Link>DEntityConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\DEntityItemConverter.cs">
+      <Link>DEntityItemConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\DocumentConverter.cs">
+      <Link>DocumentConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\FolderConverter.cs">
+      <Link>FolderConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\FolderInfoConverter.cs">
+      <Link>FolderInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridCellConverter.cs">
+      <Link>GridCellConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridCellInfoConverter.cs">
+      <Link>GridCellInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridColumnInfoConverter.cs">
+      <Link>GridColumnInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridInfoConverter.cs">
+      <Link>GridInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridRowConverter.cs">
+      <Link>GridRowConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\GridRowInfoConverter.cs">
+      <Link>GridRowInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\KeywordConverter.cs">
+      <Link>KeywordConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\LanguageConverter.cs">
+      <Link>LanguageConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\LocationConverter.cs">
+      <Link>LocationConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\MainMenuConverter.cs">
+      <Link>MainMenuConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\MetadataConverter.cs">
+      <Link>MetadataConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReferenceBriefConverter.cs">
+      <Link>ReferenceBriefConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReferenceCategoryInfoConverter.cs">
+      <Link>ReferenceCategoryInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReferenceConverter.cs">
+      <Link>ReferenceConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReferenceInfoConverter.cs">
+      <Link>ReferenceInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReferenceKeywordInfoConverter.cs">
+      <Link>ReferenceKeywordInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ReviewConverter.cs">
+      <Link>ReviewConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubitemInfoConverter.cs">
+      <Link>SubitemInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubitemValueInfoConverter.cs">
+      <Link>SubitemValueInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubjectConverter.cs">
+      <Link>SubjectConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubjectFieldConverter.cs">
+      <Link>SubjectFieldConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubjectInfoConverter.cs">
+      <Link>SubjectInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubsiteBriefConverter.cs">
+      <Link>SubsiteBriefConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubsiteConverter.cs">
+      <Link>SubsiteConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubsiteInfoConverter.cs">
+      <Link>SubsiteInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\SubsiteMenuConverter.cs">
+      <Link>SubsiteMenuConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\TemplateConverter.cs">
+      <Link>TemplateConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\TemplateInfoConverter.cs">
+      <Link>TemplateInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\UserConverter.cs">
+      <Link>UserConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\globaladmin\Global.DataConverter\ZoneInfoConverter.cs">
+      <Link>ZoneInfoConverter.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SubjectEngine.Component.Dto\SubjectEngine.Component.Dto.csproj">
+      <Project>{40ffeb81-04f5-49e6-9a7e-6f64de5a23da}</Project>
+      <Name>SubjectEngine.Component.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine\SubjectEngine.Core\SubjectEngine.Core.csproj">
+      <Project>{a8db3816-7468-435e-9ff1-e08d1b8e87bc}</Project>
+      <Name>SubjectEngine.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine\SubjectEngine.Data\SubjectEngine.Data.csproj">
+      <Project>{00fecb27-77af-4dc9-9af6-4d4baeb06ad2}</Project>
+      <Name>SubjectEngine.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

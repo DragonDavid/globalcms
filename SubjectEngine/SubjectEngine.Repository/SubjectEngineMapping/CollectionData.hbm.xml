@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="CollectionData" table="tblCollection">
+        <id name="Id" column="CollectionId" type="int">
+            <generator class="identity" />
+        </id>
+
+        <property name="Name" type="string" length="50" not-null="true">
+            <column name="Name" not-null="true" sql-type="nvarchar" length="50" />
+        </property>
+
+        <property name="CreatedById" type="int" not-null="false">
+            <column name="CreatedById" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="CreatedDate" type="DateTime" not-null="false">
+            <column name="CreatedDate" not-null="false" sql-type="datetime" />
+        </property>
+
+        <property name="ModifiedDate" type="DateTime" not-null="false">
+            <column name="ModifiedDate" not-null="false" sql-type="datetime" />
+        </property>
+
+        <bag name="CollectionItemsData" cascade="all-delete-orphan" inverse="true">
+            <key>
+                <column name="CollectionId" not-null="true"/>
+            </key>
+            <one-to-many class="CollectionItemData"/>
+        </bag>
+
+    </class>
+</hibernate-mapping>

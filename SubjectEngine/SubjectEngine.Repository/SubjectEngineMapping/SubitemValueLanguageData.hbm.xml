@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="SubitemValueLanguageData" table="tblSubitemValueLanguage">
+        <id name="Id" column="SubitemValueLanguageId" type="int">
+            <generator class="identity" />
+        </id>
+
+        <many-to-one name="Parent" class="SubitemValueData" column="SubitemValueId" not-null="true"/>
+
+        <property name="LanguageId" type="int" not-null="true">
+            <column name="LanguageId" not-null="true" sql-type="int" />
+        </property>
+        <property name="ValueText" type="string" length="3000" not-null="false">
+            <column name="ValueText" not-null="false" sql-type="nvarchar" length="3000" />
+        </property>
+        <property name="ValueHtml" column="ValueHtml" length="2147483647" />
+
+    </class>
+</hibernate-mapping>

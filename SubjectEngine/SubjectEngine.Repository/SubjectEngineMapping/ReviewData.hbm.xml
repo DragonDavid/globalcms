@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="ReviewData" table="tblReview">
+    <id name="Id" column="ReviewId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <property name="ReferenceId" type="int" not-null="true">
+      <column name="ReferenceId" not-null="true" sql-type="int" />
+    </property>
+
+    <property name="Rating" type="decimal" not-null="false">
+      <column name="Rating" not-null="false" sql-type="decimal" />
+    </property>
+
+    <property name="Content" type="string" length="1999" not-null="true">
+      <column name="Content" not-null="true" sql-type="nvarchar" length="1999" />
+    </property>
+
+      <property name="Title" type="string" length="100" not-null="false">
+          <column name="Title" not-null="false" sql-type="nvarchar" length="100" />
+      </property>
+
+      <property name="IssuedBy" type="string" length="100" not-null="false">
+          <column name="IssuedBy" not-null="false" sql-type="nvarchar" length="100" />
+      </property>
+
+      <property name="IssuedByEmail" type="string" length="100" not-null="false">
+          <column name="IssuedByEmail" not-null="false" sql-type="nvarchar" length="100" />
+      </property>
+
+      <property name="IssuedTime" type="DateTime" not-null="false">
+      <column name="IssuedTime" not-null="false" sql-type="datetime" />
+    </property>
+
+    <property name="IsPublished" type="bool" not-null="false">
+      <column name="IsPublished" not-null="false" sql-type="bit" length="1" />
+    </property>
+  </class>
+</hibernate-mapping>

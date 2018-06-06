@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="GridInfoData" table="tblGrid" mutable="false">
+    <id name="Id" column="GridId" type="int">
+    </id>
+
+    <property name="Name" type="string" length="50" not-null="false">
+      <column name="Name" not-null="false" sql-type="nvarchar" length="50" />
+    </property>
+
+    <property name="ViewMode" type="SubjectEngine.Core.ViewMode, SubjectEngine.Core">
+      <column name="ViewMode" sql-type="int" length="4" />
+    </property>
+
+    <bag name="Columns" inverse="true">
+      <key column="GridId" />
+      <one-to-many class="GridColumnInfoData"/>
+    </bag>
+  </class>
+</hibernate-mapping>

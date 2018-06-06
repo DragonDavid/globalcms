@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="LocationLanguageData" table="tblLocationLanguage">
+    <id name="Id" column="LocationLanguageId" type="int">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Parent" class="LocationData" column="LocationId" not-null="true"/>
+
+    <property name="LanguageId" type="int" not-null="true">
+      <column name="LanguageId" not-null="true" sql-type="int" />
+    </property>
+    <property name="Name" type="string" length="100" not-null="true">
+      <column name="Name" not-null="true" sql-type="nvarchar" length="100" />
+    </property>
+  </class>
+</hibernate-mapping>

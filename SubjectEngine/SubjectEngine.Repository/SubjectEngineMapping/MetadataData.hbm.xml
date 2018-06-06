@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="MetadataData" table="tblMetadata">
+    <id name="Id" column="MetadataId" type="int">
+      <generator class="identity" />
+    </id>
+    <property name="MetaKey" type="string" length="50"  not-null="true" >
+      <column name="MetaKey" not-null="true" sql-type="nvarchar" length="50" />
+    </property>
+
+    <property name="MetaType" type="string" length="100" not-null="false">
+      <column name="MetaType" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="MetaContent" type="string" length="200" not-null="false">
+      <column name="MetaContent" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+  </class>
+</hibernate-mapping>

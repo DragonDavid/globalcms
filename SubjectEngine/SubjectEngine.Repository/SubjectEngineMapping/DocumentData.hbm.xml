@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="DocumentData" table="tblDocument">
+    <id name="Id" column="DocumentId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <property name="Title" type="string" length="100" not-null="true">
+      <column name="Title" not-null="true" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="FileName" type="string" length="100" not-null="false">
+      <column name="FileName" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="ContentUri" type="string" length="200" not-null="false">
+      <column name="ContentUri" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+    <property name="DocTypeId" type="int" not-null="false">
+      <column name="DocTypeId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="IssuedById" type="int" not-null="false">
+      <column name="IssuedById" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="IssuedDate" type="DateTime" not-null="false">
+      <column name="IssuedDate" not-null="false" sql-type="datetime" />
+    </property>
+
+    <property name="Extension" type="string" length="10" not-null="false">
+      <column name="Extension" not-null="false" sql-type="nvarchar" length="10" />
+    </property>
+
+    <property name="ContentType" type="string" length="100" not-null="false">
+      <column name="ContentType" not-null="false" sql-type="nvarchar" length="100" />
+    </property>
+
+    <property name="ContentLength" type="int" not-null="false">
+      <column name="ContentLength" not-null="false" sql-type="int" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="SubitemInfoData" table="tblSubitem" mutable="false">
+    <id name="Id" column="SubitemId" type="int">
+    </id>
+
+    <many-to-one name="Parent" class="BlockInfoData" column="BlockId" not-null="true"/>
+
+    <property name="ItemKey" type="string" not-null="false">
+      <column name="ItemKey" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="ItemLabel" type="string" not-null="false">
+      <column name="ItemLabel" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="DefaultValue" type="string" not-null="false">
+      <column name="DefaultValue" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="IsMetaProvider" type="bool" not-null="false">
+      <column name="IsMetaProvider" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="DucType" type="SubjectEngine.Core.DucTypes, SubjectEngine.Core">
+      <column name="DataTypeId" sql-type="int" length="4" />
+    </property>
+
+    <many-to-one name="Grid" class="GridInfoData" column="GridId" not-null="false"/>
+
+  </class>
+</hibernate-mapping>

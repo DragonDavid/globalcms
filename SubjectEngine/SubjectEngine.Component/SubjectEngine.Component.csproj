@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FD3F2CE-1917-411A-B5FC-89BE6CDCF14F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubjectEngine.Component</RootNamespace>
+    <AssemblyName>SubjectEngine.Component</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SolutionItems\ReleaseDeploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\ba.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Business">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Component">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Component.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Data">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Globalization">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Security">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Service">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.UoW">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.UoW.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Validation">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>Properties\AssemblyVersion.cs</Link>
+    </Compile>
+    <Compile Include="AliasInfoFacade.cs" />
+    <Compile Include="AliasInfoSystem.cs" />
+    <Compile Include="ApplicationSettingFacade.cs" />
+    <Compile Include="ApplicationSettingSystem.cs" />
+    <Compile Include="AuthenticateFacade.cs" />
+    <Compile Include="BlockFacade.cs" />
+    <Compile Include="BlockSystem.cs" />
+    <Compile Include="CollectionFacade.cs" />
+    <Compile Include="CollectionSystem.cs" />
+    <Compile Include="KeywordFacade.cs" />
+    <Compile Include="KeywordSystem.cs" />
+    <Compile Include="ReviewFacade.cs" />
+    <Compile Include="ReviewSystem.cs" />
+    <Compile Include="SubjectFacade.cs" />
+    <Compile Include="SubjectSystem.cs" />
+    <Compile Include="SubsiteBatchFacade.cs" />
+    <Compile Include="FolderFacade.cs" />
+    <Compile Include="FolderSystem.cs" />
+    <Compile Include="LocationFacade.cs" />
+    <Compile Include="LocationSystem.cs" />
+    <Compile Include="MetadataFacade.cs" />
+    <Compile Include="MetadataSystem.cs" />
+    <Compile Include="SubitemValueFacade.cs" />
+    <Compile Include="SubitemValueSystem.cs" />
+    <Compile Include="SubsiteFacade.cs" />
+    <Compile Include="SubsiteSystem.cs" />
+    <Compile Include="LanguageFacade.cs" />
+    <Compile Include="LanguageSystem.cs" />
+    <Compile Include="MainMenuFacade.cs" />
+    <Compile Include="MainMenuSystem.cs" />
+    <Compile Include="RegisterFacade.cs" />
+    <Compile Include="TemplateFacade.cs" />
+    <Compile Include="TemplateSystem.cs" />
+    <Compile Include="ReferenceFacade.cs" />
+    <Compile Include="ReferenceSystem.cs" />
+    <Compile Include="ReferenceInfoFacade.cs" />
+    <Compile Include="ReferenceInfoSystem.cs" />
+    <Compile Include="DataTypeFacade.cs" />
+    <Compile Include="DataTypeSystem.cs" />
+    <Compile Include="DocumentFacade.cs" />
+    <Compile Include="DocumentSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserFacade.cs" />
+    <Compile Include="UserSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\General.Utility\General.Utility.csproj">
+      <Project>{2667dd9d-d6cb-4648-97c4-3e0bf16a300b}</Project>
+      <Name>General.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine.Business\SubjectEngine.Business.csproj">
+      <Project>{49AFE5ED-1ED8-48EB-9A83-8B44084C2BC0}</Project>
+      <Name>SubjectEngine.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine.Core\SubjectEngine.Core.csproj">
+      <Project>{A8DB3816-7468-435E-9FF1-E08D1B8E87BC}</Project>
+      <Name>SubjectEngine.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine.Data\SubjectEngine.Data.csproj">
+      <Project>{00FECB27-77AF-4DC9-9AF6-4D4BAEB06AD2}</Project>
+      <Name>SubjectEngine.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubjectEngine.Service.Contract\SubjectEngine.Service.Contract.csproj">
+      <Project>{4D8D5EA2-7EFF-44A3-B405-7BA1459E5B2D}</Project>
+      <Name>SubjectEngine.Service.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ba.snk">
+      <Link>ba.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

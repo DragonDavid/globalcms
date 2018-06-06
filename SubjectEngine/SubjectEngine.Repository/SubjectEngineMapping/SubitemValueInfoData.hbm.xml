@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="SubitemValueInfoData" table="tblSubitemValue" mutable="false">
+        <id name="Id" column="SubitemValueId" type="int">
+        </id>
+
+        <many-to-one name="Parent" class="ReferenceInfoData" column="ReferenceId" not-null="true"/>
+
+        <property name="SubitemId" type="int" not-null="true">
+            <column name="SubitemId" not-null="true" sql-type="int" />
+        </property>
+
+        <property name="ValueText" type="string" not-null="false">
+            <column name="ValueText" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="ValueHtml" column="ValueHtml" length="2147483647" />
+
+        <property name="ValueInt" type="int" not-null="false">
+            <column name="ValueInt" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="ValueDate" type="DateTime" not-null="false">
+            <column name="ValueDate" not-null="false" sql-type="datetime" />
+        </property>
+
+        <property name="ValueUrl" type="string" not-null="false">
+            <column name="ValueUrl" not-null="false" sql-type="nvarchar"/>
+        </property>
+
+        <bag name="SubitemValueLanguages" cascade="all-delete-orphan" inverse="true">
+            <key column="SubitemValueId" />
+            <one-to-many class="SubitemValueLanguageInfoData"/>
+        </bag>
+    </class>
+</hibernate-mapping>

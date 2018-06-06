@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="GridColumnInfoData" table="tblGridColumn" mutable="false">
+    <id name="Id" column="GridColumnId" type="int">
+    </id>
+
+    <many-to-one name="Parent" class="GridInfoData" column="GridId" not-null="true"/>
+
+    <property name="ColumnName" type="string" length="50" not-null="false">
+      <column name="ColumnName" not-null="false" sql-type="nvarchar" length="50" />
+    </property>
+    <property name="ColumnWidth" type="int" not-null="false">
+      <column name="ColumnWidth" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="ColumnType" type="SubjectEngine.Core.DucTypes, SubjectEngine.Core">
+      <column name="ColumnTypeId" sql-type="int" length="4" />
+    </property>
+
+    <property name="IsHidden" type="bool" not-null="false">
+      <column name="IsHidden" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+  </class>
+</hibernate-mapping>

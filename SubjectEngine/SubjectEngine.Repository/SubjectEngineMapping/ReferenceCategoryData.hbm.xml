@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="ReferenceCategoryData" table="tblReferenceCategory">
+    <id name="Id" column="ReferenceCategoryId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <many-to-one name="Parent" class="ReferenceData" column="ReferenceId" not-null="true"/>
+
+    <property name="CategoryId" type="int" not-null="true">
+      <column name="CategoryId" not-null="true" sql-type="int" />
+    </property>
+  </class>
+</hibernate-mapping>

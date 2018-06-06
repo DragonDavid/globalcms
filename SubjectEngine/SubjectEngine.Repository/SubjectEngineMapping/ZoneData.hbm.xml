@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="ZoneData" table="tblZone">
+    <id name="Id" column="ZoneId" type="int">
+      <generator class="identity" />
+    </id>
+
+    <many-to-one name="Parent" class="TemplateData" column="TemplateId" not-null="true"/>
+
+    <property name="Label" column="Label" />
+
+    <property name="ShowLabel" type="bool" not-null="false">
+      <column name="ShowLabel" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="Row" type="int" not-null="false">
+      <column name="Row" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="Col" type="int" not-null="false">
+      <column name="Col" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="Style" column="Style" />
+    <many-to-one name="Block" class="BlockData" column="BlockId" not-null="false"/>
+  </class>
+</hibernate-mapping>

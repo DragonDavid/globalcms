@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00FECB27-77AF-4DC9-9AF6-4D4BAEB06AD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubjectEngine.Data</RootNamespace>
+    <AssemblyName>SubjectEngine.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SolutionItems\ReleaseDeploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\ba.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Core">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Data">
+      <HintPath>..\..\..\cmsReference\Framework\Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>Properties\AssemblyVersion.cs</Link>
+    </Compile>
+    <Compile Include="AdministratorData.cs" />
+    <Compile Include="AliasInfoData.cs" />
+    <Compile Include="ApplicationSettingData.cs" />
+    <Compile Include="BlockData.cs" />
+    <Compile Include="BlockInfoData.cs" />
+    <Compile Include="CollectionData.cs" />
+    <Compile Include="CollectionItemData.cs" />
+    <Compile Include="KeywordData.cs" />
+    <Compile Include="ReferenceKeywordData.cs" />
+    <Compile Include="ReferenceKeywordInfo.cs" />
+    <Compile Include="SubsiteBriefData.cs" />
+    <Compile Include="FolderTreeData.cs" />
+    <Compile Include="LocationLanguageData.cs" />
+    <Compile Include="LocationData.cs" />
+    <Compile Include="MetadataData.cs" />
+    <Compile Include="SubitemValueLanguageInfoData.cs" />
+    <Compile Include="ReferenceLanguageInfoData.cs" />
+    <Compile Include="FolderLanguageInfoData.cs" />
+    <Compile Include="SubjectData.cs" />
+    <Compile Include="SubjectFieldData.cs" />
+    <Compile Include="SubjectFieldInfoData.cs" />
+    <Compile Include="SubsiteMenuLanguageData.cs" />
+    <Compile Include="ReferenceLanguageData.cs" />
+    <Compile Include="SubitemValueLanguageData.cs" />
+    <Compile Include="FolderLanguageData.cs" />
+    <Compile Include="SubjectLanguageInfoData.cs" />
+    <Compile Include="MainMenuLanguageData.cs" />
+    <Compile Include="SubsiteData.cs" />
+    <Compile Include="LanguageData.cs" />
+    <Compile Include="MainMenuData.cs" />
+    <Compile Include="SubitemData.cs" />
+    <Compile Include="ReferenceCategoryInfoData.cs" />
+    <Compile Include="ReferenceCategoryData.cs" />
+    <Compile Include="CategoryData.cs" />
+    <Compile Include="ReviewData.cs" />
+    <Compile Include="SubjectInfoData.cs" />
+    <Compile Include="SubsiteInfoData.cs" />
+    <Compile Include="SubsiteMenuData.cs" />
+    <Compile Include="UserData.cs" />
+    <Compile Include="UserIdentity.cs" />
+    <Compile Include="ZoneData.cs" />
+    <Compile Include="TemplateInfoData.cs" />
+    <Compile Include="TemplateData.cs" />
+    <Compile Include="GridRowInfoData.cs" />
+    <Compile Include="GridCellInfoData.cs" />
+    <Compile Include="GridColumnInfoData.cs" />
+    <Compile Include="GridInfoData.cs" />
+    <Compile Include="SubitemValueData.cs" />
+    <Compile Include="FolderInfoData.cs" />
+    <Compile Include="FolderData.cs" />
+    <Compile Include="SubitemValueInfoData.cs" />
+    <Compile Include="DocumentInfoData.cs" />
+    <Compile Include="ReferenceData.cs" />
+    <Compile Include="DocumentData.cs" />
+    <Compile Include="ZoneInfoData.cs" />
+    <Compile Include="GridCellData.cs" />
+    <Compile Include="GridColumnData.cs" />
+    <Compile Include="GridData.cs" />
+    <Compile Include="GridRowData.cs" />
+    <Compile Include="ReferenceBriefData.cs" />
+    <Compile Include="ReferenceInfoData.cs" />
+    <Compile Include="SubitemInfoData.cs" />
+    <Compile Include="DataTypeData.cs" />
+    <Compile Include="DEntityData.cs" />
+    <Compile Include="DEntityItemData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SubjectEngine.Core\SubjectEngine.Core.csproj">
+      <Project>{A8DB3816-7468-435E-9FF1-E08D1B8E87BC}</Project>
+      <Name>SubjectEngine.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ba.snk">
+      <Link>ba.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="TemplateInfoData" table="tblTemplate" mutable="false">
+    <id name="Id" column="TemplateId" type="int">
+    </id>
+
+    <property name="Name" type="string" length="50" not-null="false">
+      <column name="Name" not-null="false" sql-type="nvarchar" length="50" />
+    </property>
+    <property name="Slug" type="string" length="200" not-null="false">
+      <column name="Slug" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="HideTitle" type="bool" not-null="false">
+      <column name="HideTitle" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <property name="EnableReview" type="bool" not-null="false">
+      <column name="EnableReview" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="EnableCategory" type="bool" not-null="false">
+      <column name="EnableCategory" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="EnableLocation" type="bool" not-null="false">
+      <column name="EnableLocation" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="CreatedDate" type="DateTime" not-null="false">
+      <column name="CreatedDate" not-null="false" sql-type="datetime" />
+    </property>
+    <property name="ModifiedDate" type="DateTime" not-null="false">
+      <column name="ModifiedDate" not-null="false" sql-type="datetime" />
+    </property>
+    <property name="RelatedContentNo" type="int" not-null="false">
+      <column name="RelatedContentNo" not-null="false" sql-type="int" />
+    </property>
+
+    <bag name="Zones" inverse="true">
+      <key column="TemplateId" />
+      <one-to-many class="ZoneInfoData"/>
+    </bag>
+
+    <bag name="Categorys" inverse="true">
+      <key column="TemplateId" />
+      <one-to-many class="CategoryData"/>
+    </bag>
+    <bag name="Keywords" inverse="true">
+      <key column="TemplateId" />
+      <one-to-many class="KeywordData"/>
+    </bag>
+  </class>
+</hibernate-mapping>

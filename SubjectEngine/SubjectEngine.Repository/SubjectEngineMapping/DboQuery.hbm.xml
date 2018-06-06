@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+
+  <sql-query name="GetReferenceBriefList">
+    <return class="ReferenceBriefData" />
+
+    <![CDATA[
+    exec dbo.GetReferenceBriefList :folderId, :pageIndex, :pageSize
+    ]]>
+
+  </sql-query>
+
+  <sql-query name="GetReferencesByTemplate">
+    <return class="SubjectInfoData" />
+
+    <![CDATA[
+    exec dbo.GetReferencesByTemplate :templateId, :categoryId, :pageIndex, :pageSize, :locationId, :languageId, :subsiteId
+    ]]>
+
+  </sql-query>
+
+  <sql-query name="GetReferencesByKeyword">
+    <return class="SubjectInfoData" />
+
+    <![CDATA[
+    exec dbo.GetReferencesByKeyword :keywordId, :templateId, :pageIndex, :pageSize, :languageId
+    ]]>
+
+  </sql-query>
+
+  <sql-query name="GetReferencesByCategory">
+    <return class="SubjectInfoData" />
+
+    <![CDATA[
+    exec dbo.GetReferencesByCategory :categoryId, :templateId, :pageIndex, :pageSize, :languageId
+    ]]>
+
+  </sql-query>
+
+  <sql-query name="GetReferencesByCollection">
+    <return class="SubjectInfoData" />
+
+    <![CDATA[
+    exec dbo.GetReferencesByCollection :collectionId, :locationId, :languageId
+    ]]>
+
+  </sql-query>
+
+</hibernate-mapping>

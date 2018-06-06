@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="CollectionItemData" table="tblCollectionItem">
+        <id name="Id" column="CollectionItemId" type="int">
+            <generator class="identity" />
+        </id>
+
+        <many-to-one name="Parent" class="CollectionData" column="CollectionId"/>
+        
+        <property name="ReferenceId" type="int" not-null="true">
+            <column name="ReferenceId" not-null="true" sql-type="int" />
+        </property>
+
+        <property name="Sort" type="int" not-null="false">
+            <column name="Sort" not-null="false" sql-type="int" />
+        </property>
+
+    </class>
+</hibernate-mapping>

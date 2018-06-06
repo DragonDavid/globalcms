@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="FolderInfoData" table="vwFolderInfo" mutable="false">
+    <id name="Id" column="FolderId" type="int">
+    </id>
+
+    <property name="Name" type="string" length="200" not-null="false">
+      <column name="Name" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Slug" type="string" length="200" not-null="false">
+      <column name="Slug" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+    <property name="ParentId" type="int" not-null="false">
+      <column name="ParentId" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="FolderType" type="SubjectEngine.Core.FolderType, SubjectEngine.Core">
+      <column name="FolderTypeId" sql-type="int" length="4" />
+    </property>
+
+    <property name="FullName" type="string" length="200" not-null="false">
+      <column name="FullName" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="FullSlug" type="string" length="200" not-null="false">
+      <column name="FullSlug" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+
+    <property name="IsSubsiteRoot" type="bool" not-null="false">
+      <column name="IsSubsiteRoot" not-null="false" sql-type="bit" length="1" />
+    </property>
+    <property name="Sort" type="int" not-null="false">
+      <column name="Sort" not-null="false" sql-type="int" />
+    </property>
+
+    <property name="SubsiteFolderId" type="int" not-null="false">
+      <column name="SubsiteFolderId" not-null="false" sql-type="int" />
+    </property>
+    <property name="IsPublished" type="bool" not-null="false">
+      <column name="IsPublished" not-null="false" sql-type="bit" length="1" />
+    </property>
+
+    <bag name="FolderLanguages" cascade="all-delete-orphan" inverse="true">
+      <key column="FolderId" />
+      <one-to-many class="FolderLanguageInfoData"/>
+    </bag>
+
+  </class>
+</hibernate-mapping>

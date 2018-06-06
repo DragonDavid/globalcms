@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="SubsiteData" table="tblSubsite">
+        <id name="Id" column="SubsiteId" type="int">
+            <generator class="identity" />
+        </id>
+
+        <property name="SubsiteFolderId" type="int" not-null="false">
+            <column name="SubsiteFolderId" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="Address" type="string" not-null="false">
+            <column name="Address" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="Phone" type="string" not-null="false">
+            <column name="Phone" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="Fax" type="string" not-null="false">
+            <column name="Fax" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="Email" type="string" not-null="false">
+            <column name="Email" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="Website" type="string" not-null="false">
+            <column name="Website" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="DefaultLanguageId" type="int" not-null="false">
+            <column name="DefaultLanguageId" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="DefaultLocationId" type="int" not-null="false">
+            <column name="DefaultLocationId" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="BackColor" type="string" not-null="false">
+            <column name="BackColor" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="TitleColor" type="string" not-null="false">
+            <column name="TitleColor" not-null="false" sql-type="nvarchar" />
+        </property>
+
+        <property name="BannerUrl" type="string" not-null="false">
+            <column name="BannerUrl" not-null="false" sql-type="nvarchar" />
+        </property>
+        <property name="IsPublished" type="bool" not-null="false">
+            <column name="IsPublished" not-null="false" sql-type="bit" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

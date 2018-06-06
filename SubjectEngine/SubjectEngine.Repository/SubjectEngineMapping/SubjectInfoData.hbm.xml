@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+  <class name="SubjectInfoData" mutable="false">
+    <id name="Id" column="ReferenceId" type="int">
+    </id>
+
+    <property name="UrlAlias" type="string" length="200" not-null="false">
+      <column name="UrlAlias" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Title" type="string" length="200" not-null="false">
+      <column name="Title" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="Description" type="string" length="1000" not-null="false">
+      <column name="Description" not-null="false" sql-type="nvarchar" length="1000" />
+    </property>
+    <property name="ImageUrl" type="string" length="200" not-null="false">
+      <column name="ImageUrl" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="MasterSubjectId" type="int" not-null="false">
+      <column name="MasterSubjectId" not-null="false" sql-type="int" />
+    </property>
+    <property name="MasterSubjectTitle" type="string" length="200" not-null="false">
+      <column name="MasterSubjectTitle" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="MasterSubjectUrlAlias" type="string" length="200" not-null="false">
+      <column name="MasterSubjectUrlAlias" not-null="false" sql-type="nvarchar" length="200" />
+    </property>
+    <property name="TotalCount" type="int" not-null="false">
+      <column name="TotalCount" not-null="false" sql-type="int" />
+    </property>
+  </class>
+</hibernate-mapping>

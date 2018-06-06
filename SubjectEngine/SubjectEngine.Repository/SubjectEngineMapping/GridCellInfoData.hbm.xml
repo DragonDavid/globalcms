@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SubjectEngine.Data" namespace="SubjectEngine.Data">
+    <class name="GridCellInfoData" table="tblGridCell" mutable="false">
+        <id name="Id" column="GridCellId" type="int">
+        </id>
+
+        <many-to-one name="Parent" class="GridRowInfoData" column="RowId" not-null="true"/>
+
+        <property name="GridColumnId" type="int" not-null="false">
+            <column name="GridColumnId" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="ValueText" type="string" not-null="false">
+            <column name="ValueText" not-null="false" sql-type="nvarchar" />
+        </property>
+        <property name="ValueHtml" column="ValueHtml" length="2147483647" />
+
+        <property name="ValueInt" type="int" not-null="false">
+            <column name="ValueInt" not-null="false" sql-type="int" />
+        </property>
+
+        <property name="ValueDate" type="DateTime" not-null="false">
+            <column name="ValueDate" not-null="false" sql-type="datetime" />
+        </property>
+
+        <property name="ValueUrl" type="string" not-null="false">
+            <column name="ValueUrl" not-null="false" sql-type="nvarchar"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
