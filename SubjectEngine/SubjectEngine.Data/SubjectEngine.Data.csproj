@@ -95,6 +95,7 @@
     <Compile Include="BlockInfoData.cs" />
     <Compile Include="CollectionData.cs" />
     <Compile Include="CollectionItemData.cs" />
+    <Compile Include="ReferenceBriefLanguageData.cs" />
     <Compile Include="KeywordData.cs" />
     <Compile Include="ReferenceKeywordData.cs" />
     <Compile Include="ReferenceKeywordInfo.cs" />

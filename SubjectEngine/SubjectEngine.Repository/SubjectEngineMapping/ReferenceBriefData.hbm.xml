@@ -40,5 +40,10 @@
     <property name="TotalCount" type="int" not-null="false">
       <column name="TotalCount" not-null="false" sql-type="int" />
     </property>
+
+    <bag name="ReferenceLanguages" cascade="all-delete-orphan" inverse="true">
+      <key column="ReferenceId" />
+      <one-to-many class="ReferenceBriefLanguageData"/>
+    </bag>
   </class>
 </hibernate-mapping>

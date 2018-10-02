@@ -19,7 +19,7 @@ namespace SubjectEngine.Component.Test
 
             //List<FolderInfoDto> list = facade.GetFolders(Core.FolderType.Content, new FolderInfoConverter());
 
-            List<ReferenceBriefDto> result11 = facade.GetList<ReferenceBriefDto>(13, 1, 10, new ReferenceBriefConverter());
+            List<ReferenceBriefDto> result11 = facade.GetList<ReferenceBriefDto>(30, 1, 10, new ReferenceBriefConverter(2));
             if (result11 != null)
             {
             }

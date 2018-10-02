@@ -20,6 +20,11 @@ namespace SubjectEngine.Service.Test
             if (result != null)
             {
             }
+
+            var list = service.GetList(30, 1, 6);
+            if (list != null)
+            {
+            }
         }
     }
 }
