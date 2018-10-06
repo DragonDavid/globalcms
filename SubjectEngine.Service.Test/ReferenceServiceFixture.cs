@@ -16,8 +16,13 @@ namespace SubjectEngine.Service.Test
         {
             IReferenceService service = UnitOfWork.GetService<IReferenceService>();
 
-            var result = service.GetReference(10);
+            var result = service.GetReference("home");
             if (result != null)
+            {
+            }
+
+            var list = service.GetList(30, 1, 6);
+            if (list != null)
             {
             }
         }

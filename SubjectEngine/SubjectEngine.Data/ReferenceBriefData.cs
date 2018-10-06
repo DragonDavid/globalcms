@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Framework.Data;
 
 namespace SubjectEngine.Data
@@ -16,5 +17,6 @@ namespace SubjectEngine.Data
         public virtual string Template { get; set; }
         public virtual string LocationName { get; set; }
         public virtual int TotalCount { get; set; }
+        public virtual IEnumerable<ReferenceBriefLanguageData> ReferenceLanguages { get; set; }
     }
 }
