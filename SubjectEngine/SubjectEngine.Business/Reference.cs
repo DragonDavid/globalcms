@@ -49,13 +49,13 @@ namespace SubjectEngine.Business
             get;
             private set;
         }
-        
-        [RequiredField("ReferenceNameRequired", "The Name must be defined.")]
-        [StringLength("ReferenceNameLength", "The Name must have a length less than {1}", MaxLength = 100)]
-        public string Name
+
+        [RequiredField("ReferenceTitleRequired", "The Title must be defined.")]
+        [StringLength("ReferenceTitleLength", "The Title must have a length less than {1}", MaxLength = 200)]
+        public string Title
         {
-            get { return Data.Name; }
-            set { Data.Name = value; }
+            get { return Data.Title; }
+            set { Data.Title = value; }
         }
 
         [RequiredField("ReferenceSlugRequired", "The Slug must be defined.")]
@@ -66,11 +66,11 @@ namespace SubjectEngine.Business
             set { Data.Slug = value; }
         }
 
-        [StringLength("ReferenceTitleLength", "The Title must have a length less than {1}", MaxLength = 200)]
-        public string Title
+        [StringLength("ReferenceNameLength", "The Name must have a length less than {1}", MaxLength = 100)]
+        public string Name
         {
-            get { return Data.Title; }
-            set { Data.Title = value; }
+            get { return Data.Name; }
+            set { Data.Name = value; }
         }
 
         [StringLength("ReferenceThumbnailUrlLength", "The ThumbnailUrl must have a length less than {1}", MaxLength = 200)]
