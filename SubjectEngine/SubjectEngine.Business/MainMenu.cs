@@ -6,7 +6,6 @@ namespace SubjectEngine.Business
 {
     public class MainMenu : BusinessObject<MainMenuData>
     {
-        [RequiredField("MainMenuNameRequired", "The Name must be defined.")]
         [StringLength("MainMenuNameLength", "The Name must have a length less than {1}", MaxLength = 50)]
         public string Name
         {
@@ -20,6 +19,7 @@ namespace SubjectEngine.Business
             }
         }
 
+        [RequiredField("MainMenuMenuTextRequired", "The MenuText must be defined.")]
         [StringLength("MainMenuMenuTextLength", "The MenuText must have a length less than {1}", MaxLength = 100)]
         public string MenuText
         {
