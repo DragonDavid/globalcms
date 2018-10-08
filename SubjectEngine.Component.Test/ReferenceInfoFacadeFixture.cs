@@ -13,7 +13,13 @@ namespace SubjectEngine.Component.Test
         {
             ReferenceInfoFacade facade = new ReferenceInfoFacade(UnitOfWork);
 
-            var result = facade.GetSubjectsByKeyword(22, 9, 1, 10, 1, new SubjectInfoConverter());
+            var result = facade.GetAttachedSubjects<SubjectInfoDto>(23, 17, 1, 10, 1, 1, new SubjectInfoConverter());
+            if (result != null)
+            {
+            }
+
+
+            result = facade.GetSubjectsByKeyword(22, 9, 1, 10, 1, new SubjectInfoConverter());
 
             //result = facade.GetSubjectsByTemplate(9, null, 1, 10, null, null, 1, new SubjectInfoConverter());
 
@@ -28,11 +34,6 @@ namespace SubjectEngine.Component.Test
             if (result113 != null)
             {
             }
-
-            //var result = facade.GetAttachedSubjects<SubjectInfoDto>(3968, 17, 1, 10, 1, 1, new SubjectInfoConverter());
-            //if (result != null)
-            //{
-            //}
 
             ReferenceInfoDto item = facade.GetReferenceInfo<ReferenceInfoDto>(3965, new ReferenceInfoConverter());
             if (item != null)
