@@ -88,14 +88,47 @@ namespace SubjectEngine.Repository
                 SubitemValueInfoData value = reference.Values.SingleOrDefault(o => object.Equals(o.SubitemId, subitemId));
                 if (value != null && value.ValueInt.HasValue)
                 {
-                    object templateId = value.ValueInt.Value;
-                    int? categoryId = value.ValueText.TryToParse<int>();
-                    result = GetSubjectsByTemplate(templateId, categoryId, pageIndex, pageSize, reference.SubsiteId, locationId, languageId);
+                    object folderId = value.ValueInt.Value;
+                    int? templateId = value.ValueText.TryToParse<int>();
+                    result = GetSubjectsByFolder(folderId, templateId, pageIndex, pageSize, languageId);
                 }
             }
             return result;
         }
 
+        public IEnumerable<SubjectInfoData> GetSubjectsByFolder(object folderId, object templateId, int pageIndex, int pageSize, object languageId = null)
+        {
+            ArgumentValidator.IsNotNull("folderId", folderId);
+
+            IEnumerable<SubjectInfoData> result = null;
+
+            IQuery query = CurrentSession.GetNamedQuery("GetReferencesByFolder");
+            query.SetParameter("folderId", folderId);
+            query.SetInt32("pageIndex", pageIndex);
+            query.SetInt32("pageSize", pageSize);
+            // set templateId
+            if (templateId != null)
+            {
+                query.SetParameter("templateId", templateId);
+            }
+            else
+            {
+                query.SetString("templateId", null);
+            }
+            // set languageId
+            if (languageId != null)
+            {
+                query.SetParameter("languageId", languageId);
+            }
+            else
+            {
+                query.SetString("languageId", null);
+            }
+            result = query.List<SubjectInfoData>();
+            return result;
+        }
+
+        // This function might be obsoleted, replaced by GetSubjectsByFolder()
         public IEnumerable<SubjectInfoData> GetSubjectsByTemplate(object templateId, object categoryId, int pageIndex, int pageSize, object subsiteId = null, object locationId = null, object languageId = null)
         {
             ArgumentValidator.IsNotNull("templateId", templateId);

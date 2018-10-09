@@ -10,6 +10,15 @@
 
   </sql-query>
 
+  <sql-query name="GetReferencesByFolder">
+    <return class="SubjectInfoData" />
+
+    <![CDATA[
+    exec dbo.GetReferencesByFolder :folderId, :templateId, :pageIndex, :pageSize, :languageId
+    ]]>
+
+  </sql-query>
+
   <sql-query name="GetReferencesByTemplate">
     <return class="SubjectInfoData" />
 
